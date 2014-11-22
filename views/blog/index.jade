@@ -1,0 +1,21 @@
+extends ../../layouts/default
+
+block head
+  title Blog
+
+block neck
+
+block body
+  section#personalApp.contiainer.content-section.text-center
+
+  script#personalData(type='text/template')
+    <img src="<%= results[0].user.picture.medium %>" class="img-thumbnail" alt="Responsiveimage" alt="" style="margin-top:10px;">
+    <h1><%= results[0].user.gender %></h1>
+    <h1><%= results[0].user.name.first %> <%= results[0].user.name.last %></h1>
+    <h2><%= results[0].user.location.city %></h2>
+    <h2><%= results[0].user.email %></h2>
+
+  script(src='/vendor/jquery/dist/jquery.min.js?#{cacheBreaker}')
+  script(src='/vendor/underscore/underscore.js?#{cacheBreaker}')
+  script(src='/vendor/backbone/backbone.js?#{cacheBreaker}')
+  script(src='/views/blog/main.js?#{cacheBreaker}')

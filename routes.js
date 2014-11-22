@@ -32,6 +32,9 @@ exports = module.exports = function(app, passport) {
   //front end
   app.get('/', require('./views/index').init);
   app.get('/about/', require('./views/about/index').init);
+  
+  app.get('/blog/', require('./views/blog/index').init);
+
   app.get('/contact/', require('./views/contact/index').init);
   app.post('/contact/', require('./views/contact/index').sendMessage);
 
